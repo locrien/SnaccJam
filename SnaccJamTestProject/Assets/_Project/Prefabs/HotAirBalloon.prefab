@@ -73,8 +73,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 17.6766, y: 1.1661749, z: 24.992943}
-  - {x: 17.54, y: 0.18200001, z: 25.278}
+  - {x: 17.67538, y: 1.53, z: 24.992943}
+  - {x: 17.54, y: 0.35199997, z: 25.278}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -335,6 +335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8952443673829239000}
   - component: {fileID: 8952443673829239001}
+  - component: {fileID: 1340850382}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -392,6 +393,19 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 8952443672989499161}
+--- !u!114 &1340850382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8952443673829239006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb3c92f11f78f9e49ba8692f1c6d6a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!1 &8952443673930691222
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,8 +511,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 17.66181, y: 1.1661749, z: 25.769476}
-  - {x: 17.5304, y: 0.18240002, z: 25.473}
+  - {x: 17.66059, y: 1.53, z: 25.769476}
+  - {x: 17.5304, y: 0.35239998, z: 25.473}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -582,6 +596,7 @@ GameObject:
   - component: {fileID: 8952443673986131343}
   - component: {fileID: 8952443673986131342}
   - component: {fileID: 5674012109460962350}
+  - component: {fileID: 1979829660}
   m_Layer: 0
   m_Name: Balloon
   m_TagString: Untagged
@@ -597,8 +612,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8952443673986131328}
   m_LocalRotation: {x: -0, y: 0.33207884, z: -0, w: 0.94325167}
-  m_LocalPosition: {x: -0.008779526, y: 0.8061749, z: -0.1933403}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.01, y: 1, z: -0.1933403}
+  m_LocalScale: {x: 1, y: 1.15, z: 1}
   m_Children:
   - {fileID: 8952443673955963420}
   - {fileID: 8952443672570152694}
@@ -665,7 +680,7 @@ Rigidbody:
   m_GameObject: {fileID: 8952443673986131328}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 1000
+  m_Drag: 4
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -697,9 +712,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10c871d8c8220d4ea1e6b09133f2a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForceGainPerSecond: 2
-  ForceLossPerSecond: 0.1
-  ActiveForceLossPerSecond: 1
+  OutsidePressure: 0
+  InsidePressure: 0
+  CurrentForce: 0
+  MaxHeight: 15
+  FirePressureChange: 1.1
+  ReleasePressureChange: 1.5
+  ConstantPressureChange: 0.1
+  CorrectiveForceFactor: 10
+--- !u!114 &1979829660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8952443673986131328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e9fea14055361a459efb326791967ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimumHeight: 3
+  WindIntensity: 6
+  BaseDirection: {x: 1, y: 0, z: 0}
+  RotationPerUnit: 50
+  WindForce: {x: 0, y: 0, z: 0}
 --- !u!1 &8952443674176511422
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,8 +810,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 17.08116, y: 1.1661749, z: 25.771732}
-  - {x: 17.3372, y: 0.18910001, z: 25.4746}
+  - {x: 17.079939, y: 1.53, z: 25.771732}
+  - {x: 17.3372, y: 0.35909998, z: 25.4746}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -990,7 +1027,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 17.434, y: 0.2011749, z: 25.38}
+  m_ConnectedAnchor: {x: 17.434, y: 0.35999995, z: 25.38}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 2
@@ -1147,8 +1184,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 17.04399, y: 1.1661749, z: 25.015152}
-  - {x: 17.336, y: 0.18330002, z: 25.2834}
+  - {x: 17.042768, y: 1.53, z: 25.015152}
+  - {x: 17.336, y: 0.35329998, z: 25.2834}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
