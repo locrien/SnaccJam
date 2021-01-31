@@ -32,7 +32,7 @@ public class WindControls : MonoBehaviour
 		else
 		{
 			var lowIntensity = (transform.position.y / MinimumHeight);
-			WindForce = BaseDirection * lowIntensity;
+			WindForce = BaseDirection * lowIntensity * WindIntensity;
 			_rigidBody.AddForce(WindForce, ForceMode.Force);
 		}
 	}
