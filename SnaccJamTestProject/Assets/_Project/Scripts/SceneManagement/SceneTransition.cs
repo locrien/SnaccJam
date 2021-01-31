@@ -16,6 +16,8 @@ public class SceneTransition : MonoBehaviour
 	// Start is called before the first frame update
 	public void TransitionToScene(string sceneName, float inTime, float outTime)
     {
+		_canvasGroup.alpha = 0f;
+		_canvasGroup.gameObject.SetActive(true);
 		StartCoroutine(TransitionToSceneAsync(sceneName, inTime, outTime));
     }
 

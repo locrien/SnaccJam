@@ -16,6 +16,6 @@ public class AltitudeText : MonoBehaviour
 
 	private void Update()
 	{
-		_text.text = TargetTransform.position.y.ToString();
+		_text.text = $"Altitude : {TargetTransform.position.y.ToString()}";
 	}
 }
