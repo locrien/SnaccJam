@@ -228,7 +228,6 @@ GameObject:
   - component: {fileID: 1028931967}
   - component: {fileID: 1028931966}
   - component: {fileID: 1028931965}
-  - component: {fileID: 1028931969}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -335,32 +334,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1028931969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1028931964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 132feb08c837a7b4ab02ed883059ec6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Perspectives:
-  - {fileID: 1340850380}
-  - {fileID: 1972848767}
---- !u!114 &1340850380 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8952443673829239001, guid: 271b0c8ea7aa08345b95c86c1abbc9cc, type: 3}
-  m_PrefabInstance: {fileID: 8952443672677525525}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926005886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1383251445
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,17 +410,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8952443673829239006, guid: 271b0c8ea7aa08345b95c86c1abbc9cc, type: 3}
   m_PrefabInstance: {fileID: 8952443672677525525}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1972848767 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1972848767, guid: 73534759ebbd4b54daa8d00ab9b604a1, type: 3}
-  m_PrefabInstance: {fileID: 3272108798295941670}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1979829657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8952443673986131340, guid: 271b0c8ea7aa08345b95c86c1abbc9cc, type: 3}

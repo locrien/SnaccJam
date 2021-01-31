@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotationInput : MonoBehaviour
+public class MouseControl : MonoBehaviour
 {
 	Vector2 rotation = new Vector2(0, 0);
 	public float speed = 3;

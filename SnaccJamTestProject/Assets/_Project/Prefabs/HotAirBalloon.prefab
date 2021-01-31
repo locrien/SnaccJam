@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 8952443673829239001}
   - component: {fileID: 1340850382}
   m_Layer: 0
-  m_Name: BasketCam
+  m_Name: BasketVCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
